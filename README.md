@@ -13,11 +13,21 @@ kint - "dump utility"
 ## Dependancies
 1. Laravel (> laravel make:auth)
 
-## Vision  
-To create a Laravel modeule that allows managing users and their security access for an organization.
+## Application Requirements
 
-## From Nate:
-A ton of my projects I have built have the same code as a start. Companies, company members with different permission levels, and a monthly price. It is basically what laravel spark is. Some day I'm going to build it as a module so I can just plug it in to any new project.
+As a basis for a new SASS application I would love to have a modular installed package that gives me the basic functionality needed in 90% of Sass applications.
+
+This functionality includes:
+
+* Normal user registration
+* Admin can create payment plans, including a free plan
+* Any user can create a Organization, they become the manager of the Organization, free plan auto selected
+* Organization managers can invite other users to the Organization and specify their role (manager|employee)
+* Invites are done via email address, if user exists sends them an email with a link to connect, if not the user registers then is connected
+* Managers of an organization can enter in payment info for their organization, creates a stripe customer
+* Managers of and organization can select a plan for the organization, charges correct amount
+* Cron job to charge organization each month (stripe payment)
+* Since users can belong to many organizations need a way to switch between organizations they are currently viewing/managing
 
 ### Project Work Tasks
 
